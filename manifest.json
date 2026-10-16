@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "description": "Solicita tu cita de protección automotriz en Protecars Quito.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "PROTECARS",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Protecars",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "id": "/protecars-app/"
+}
