@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f7">
+  <meta name="description" content="Solicita tu cita de protección automotriz en Protecars Quito.">
+  <title>Protecars | Agenda tu cita</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="#inicio" class="brand" aria-label="Protecars, ir al inicio"><img src="logo.png"  alt="Logo proporcionado de Protecars"></a>
+    <a href="#servicios" class="header-link">Ver servicios <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><span class="eyebrow"><span class="dot"></span> PROTECCIÓN AUTOMOTRIZ · QUITO</span>
+        <h1 id="hero-title">TU AUTO.<br><em>NUESTRA PRIORIDAD.</em></h1>
+        <p>Elige el servicio que necesitas y solicita tu cita en minutos. Nuestro equipo confirmará la disponibilidad por WhatsApp.</p>
+        <a class="button button-primary" href="#servicios">Explorar servicios <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-visual"><img src="IMAGEN CENTRAL.png" alt="Toyota Land Cruiser en taller automotriz Protecars"><span class="photo-label">PROTECARS <span> / CUIDAMOS CADA DETALLE</span></span></div>
+    </section>
+    <section class="services section-wrap" id="servicios" aria-labelledby="services-title">
+      <div class="section-heading"><div><span class="eyebrow">01 / SERVICIOS</span><h2 id="services-title">ELIGE TU <em>PROTECCIÓN</em></h2></div><p>Selecciona una opción para completar tu solicitud de cita.</p></div>
+      <div class="service-grid">
+        <button class="service-card" type="button" data-service="laminas"><span class="service-index">01 / SEGURIDAD</span><span class="service-icon" aria-hidden="true">▧</span><strong>Láminas de seguridad</strong><span class="service-desc">Opciones de 8 mil, 16 mil y 20 mil micras.</span><span class="card-cta">Agendar este servicio <b>↗</b></span></button>
+        <button class="service-card" type="button" data-service="ceramic"><span class="service-index">02 / BRILLO Y PROTECCIÓN</span><span class="service-icon" aria-hidden="true">✦</span><strong>Ceramic Coating SONAX</strong><span class="service-desc">Tratamiento de protección y acabado para la pintura.</span><span class="card-cta">Agendar este servicio <b>↗</b></span></button>
+        <button class="service-card" type="button" data-service="interior"><span class="service-index">03 / INTERIOR</span><span class="service-icon" aria-hidden="true">▤</span><strong>PPF interior</strong><span class="service-desc">Infoentretenimiento, mandos al volante y consola.</span><span class="card-cta">Agendar este servicio <b>↗</b></span></button>
+        <button class="service-card" type="button" data-service="exterior"><span class="service-index">04 / EXTERIOR</span><span class="service-icon" aria-hidden="true">◇</span><strong>PPF exterior</strong><span class="service-desc">Zócalos, bordes de puertas y manijas.</span><span class="card-cta">Agendar este servicio <b>↗</b></span></button>
+        <button class="service-card premium" type="button" data-service="premium"><span class="service-index">05 / PREMIUM</span><span class="service-icon" aria-hidden="true">✧</span><strong>PPF auto completo</strong><span class="service-desc">Cobertura premium para la carrocería del vehículo.</span><span class="card-cta">Agendar este servicio <b>↗</b></span></button>
+      </div>
+    </section>
+    <section class="booking section-wrap" id="agenda" aria-labelledby="booking-title">
+      <div class="section-heading"><div><span class="eyebrow">02 / TU CITA</span><h2 id="booking-title">AGENDA <em>CON NOSOTROS</em></h2></div><p>Completa tus datos. La cita queda pendiente hasta que Protecars la confirme por WhatsApp.</p></div>
+      <form id="booking-form" class="booking-form">
+        <div class="form-heading"><span class="step-bubble">1</span><h3>Servicio y horario</h3></div>
+        <div class="form-grid">
+          <label class="field">Servicio solicitado <span>*</span><select id="service" name="service" required><option value="">Selecciona un servicio</option><option value="laminas">Láminas de seguridad</option><option value="ceramic">Ceramic Coating SONAX</option><option value="interior">PPF interior</option><option value="exterior">PPF exterior</option><option value="premium">PPF auto completo — Premium</option></select></label>
+          <label class="field" id="micraje-field" hidden>Micraje <span>*</span><select id="micraje" name="micraje"><option value="">Selecciona micraje</option><option>8 mil micras</option><option>16 mil micras</option><option>20 mil micras</option></select></label>
+          <label class="field">Fecha preferida <span>*</span><input id="date" name="date" type="date" required></label>
+          <label class="field">Hora preferida <span>*</span><input id="time" name="time" type="time" min="08:00" max="18:00" required><small>Horario solicitado, sujeto a confirmación.</small></label>
+        </div>
+        <div class="form-heading"><span class="step-bubble">2</span><h3>Tus datos</h3></div>
+        <div class="form-grid"><label class="field">Nombre completo <span>*</span><input name="name" id="name" autocomplete="name" placeholder="Tu nombre" maxlength="90" required></label><label class="field">WhatsApp <span>*</span><input name="phone" id="phone" type="tel" autocomplete="tel" placeholder="099 999 9999" minlength="7" maxlength="20" required></label><label class="field full">Correo electrónico <span>*</span><input name="email" id="email" type="email" autocomplete="email" inputmode="email" placeholder="nombre@correo.com" required></label></div>
+        <div class="form-heading"><span class="step-bubble">3</span><h3>Datos del vehículo</h3></div>
+        <div class="form-grid"><label class="field">Marca <span>*</span><input name="make" id="make" placeholder="Ej. Toyota" required maxlength="60"></label><label class="field">Modelo <span>*</span><input name="model" id="model" placeholder="Ej. Land Cruiser" required maxlength="60"></label><label class="field">Año <span>*</span><input name="year" id="year" type="number" min="1950" max="2035" placeholder="Ej. 2024" required></label><label class="field">Placa (opcional)<input name="plate" id="plate" placeholder="Ej. PXX-1234" maxlength="15"></label><label class="field full">Información adicional del auto / solicitud<textarea name="details" id="details" rows="4" maxlength="1000" placeholder="Cuéntanos qué áreas deseas proteger, estado del vehículo u otros detalles importantes..."></textarea></label></div>
+        <div class="reminder"><label class="reminder-check"><input type="checkbox" id="reminder" checked><span><strong>Quiero un recordatorio de mi cita</strong><small>Podrás descargar un evento de calendario después de enviar tu solicitud. Guárdalo solo cuando Protecars confirme la fecha y hora.</small></span></label></div>
+        <button type="submit" class="button button-primary submit-btn">Enviar solicitud por WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="form-note">No se reserva automáticamente un horario. Se abrirá WhatsApp con el mensaje preparado; debes pulsar «Enviar» para que Protecars lo reciba.</p>
+        <div id="result" class="result" role="status" aria-live="polite" hidden><strong>Solicitud preparada</strong><p>Si enviaste el mensaje en WhatsApp, espera la confirmación de Protecars.</p><button type="button" id="calendar-btn" class="button button-outline" hidden>Descargar recordatorio (.ics)</button><a id="whatsapp-fallback" class="fallback" target="_blank" rel="noopener noreferrer" hidden>Abrir WhatsApp nuevamente ↗</a></div>
+      </form>
+    </section>
+  </main>
+  <footer><span>© <span id="current-year"></span> PROTECARS</span><span>Monteserrín · Quito, Ecuador</span><a href="https://wa.me/593968695736" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></footer>
+</body>
+</html>
